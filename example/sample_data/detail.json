@@ -1,0 +1,12 @@
+{
+  "data": {
+    "title": "title",
+    "description": "schedule description",
+    "start": "2020-10-10 10:10:00",
+    "end": "2020-10-10 22:22:00",
+    "editable": true
+  },
+  "message": "Succeed",
+  "status": true,
+  "error": ""
+}

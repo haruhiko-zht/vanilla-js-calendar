@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex">
+
+    <link rel="stylesheet" type="text/css" href="../src/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>Calendar</title>
+</head>
+<body>
+
+<main>
+    <section>
+        <h2 class="calendar-headline">Vanilla JS Calendar</h2>
+        <div>
+            <form action="" method="post" id="js-calendar-filter"></form>
+        </div>
+        <div id="calendar-wrap" data-csrf_token="token"></div>
+    </section>
+</main>
+
+<!-- Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<!-- Vanilla JS Calendar -->
+<script src="../src/js/calendar.js"></script>
+
+<!-- Setting -->
+<script>
+  // Instance
+  const Calendar = new VaJSCalendar(null, { year: 2020, month: 11 })
+  Calendar.renderCalendar()
+
+  // Filtering calendar (Optional)
+  const getFilterParam = () => {
+    // return something
+  }
+  document.querySelector('#js-calendar-filter').addEventListener('change', () => {
+    const filter = getFilterParam()
+    Calendar.renderCalendar(filter)
+  })
+</script>
+</body>
+</html>
